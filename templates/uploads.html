@@ -1,1 +1,19 @@
-<pre>{{ content }}</pre> 
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Storico</title>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    
+    <h1> Storico Predizioni </h1>
+    <h3> Nome File - Timestamp </h3>
+
+    <pre>{{ content }}</pre> 
+      
+    {% endblock %}
+  </body>
+</html>
+
