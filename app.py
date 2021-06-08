@@ -6,6 +6,13 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
+    if not os.path.exists("static"):
+        os.makedirs("static")
+        os.makedirs("static/logs")
+        os.makedirs("static/preds")
+    with open("static/logs/log.txt", mode='a'): pass
+    #os.makedirs(os.path.dirname("static/logs"), exist_ok=True)
+    #os.makedirs(os.path.dirname("static/preds"), exist_ok=True)
     return render_template("home.html")
 
 @app.route('/', methods=['POST'])
