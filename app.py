@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import os
 from datetime import datetime
+from class_comp import compute_scores
 
 app = Flask(__name__)
 
@@ -29,6 +30,8 @@ def upload_file():
 
 @app.route("/classifica")
 def classifica():
+    scores = compute_scores()
+    print(scores)
     return render_template("classifica.html")
 
 @app.route("/list of uploads")
