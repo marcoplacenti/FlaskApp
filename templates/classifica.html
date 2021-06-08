@@ -9,7 +9,13 @@
     {% block content %}
     
     <h1> Ordinamento Classifica </h1>
-    <p> Io, mammt e tu </p>
+    
+    <div class=page>
+      <h3>Classifica </h3>
+      {% for table in tables %}
+        {{ table|safe }}
+      {% endfor %}
+    </div>
       
     {% endblock %}
   </body>
